@@ -309,7 +309,7 @@ Note :-  For local-host , the base URI is `http://127.0.0.1:5000/api` however fo
 ### 12. **Get User Watch**
 
 - **Type of Request:** POST
-- **Endpoint:** http://127.0.0.1:5000/api/watch/get-watch-by-watch-id
+- **Endpoint:** /watch/get-watch-by-watch-id
 - **Request Body Pattern:**
     ```json
     {
