@@ -2,7 +2,7 @@
 
 ## API Requests
 
-Note :-  For local-host , the base URI is `` however for Production the uri is `https://someURIByUzairBhai/api`.
+Note :-  For local-host , the base URI is `http://127.0.0.1:5000/api` however for Production the uri is `https://someURIByUzairBhai/api`.
 
 ### 1. **Signup**
 
@@ -303,5 +303,61 @@ Note :-  For local-host , the base URI is `` however for Production the uri is `
         "success": true,
         "transferredTo": "0x0276a202cE01b0A4188B011CFD0C52b7f9179187",
         "msg": "Token ID 51 successfully Transferred to l192765@lhr.nu.edu.pk"
+    }
+    ```
+
+### 12. **Get User Watch**
+
+- **Type of Request:** POST
+- **Endpoint:** http://127.0.0.1:5000/api/watch/get-watch-by-watch-id
+- **Request Body Pattern:**
+    ```json
+    {
+        "owner_email": "umarkhatabcherrybyte@gmail.com",
+        "watchId": "7535908782276"
+    }
+    ```
+- **Response:**
+    ```json
+    {
+        "success": true,
+        "watch": {
+            "_id": "65ae5f8311460f39a4a547fd",
+            "image": "",
+            "imageURI": "https://cdn.shopify.com/s/files/1/0634/7499/1300/files/rolex_submariner_date.jpg?v=1704453234",
+            "watchName": "Twiny1",
+            "brandName": "test",
+            "price": "23",
+            "ownerWalletAddress": "0x4bD56AfeC0657d5E3a76Ff18C53c531620fFb9B4",
+            "isCertified": false,
+            "transferDate": null,
+            "clientId": "65ae5f5b11460f39a4a547f8",
+            "merchant": "65ae5ea0aedec8a9436837e6",
+            "attributes": {
+                "caseFinishes": "changed2",
+                "caseHeight": "changed2",
+                "caseStrap": "Leather",
+                "caseScrewedInLugs": "Yes",
+                "caseDiameter": "40 mm",
+                "caseClasp": "Fold-over Clasp",
+                "caseBack": "Transparent",
+                "dialGlass": "Sapphire Crystal",
+                "dialComplication": "Date Display",
+                "dialHands": "Luminous",
+                "crownInfo": "Screw-down Crown",
+                "crownMaterial": "Stainless Steel",
+                "movementAutomatic": "Yes",
+                "movementAccess": "Bottom",
+                "guaranteeStatement": "1 Year Limited Warranty",
+                "guaranteePurchaseTime": "12 months",
+                "guaranteePurchaseDate": "2024-01-11",
+                "_id": "65ae61fd7a1adcb2b966856c"
+            },
+            "createdAt": "2024-01-22T12:28:51.075Z",
+            "updatedAt": "2024-01-22T12:39:25.254Z",
+            "serialNumber": 1,
+            "__v": 0
+        },
+        "msg": "This Watch Exists"
     }
     ```
